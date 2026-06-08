@@ -1,0 +1,107 @@
+/* Configurações Globais e Fundo Moderno */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #23375e 0%, #434b55 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita barras de rolagem desnecessárias */
+}
+
+/* Contentor principal que segura o canvas */
+main {
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden; /* Garante que o canvas respeita as bordas arredondadas */
+}
+
+/* Estilização do Canvas do p5.js */
+canvas {
+  display: block;
+  /* O tamanho é definido no sketch.js, mas garantimos que ele se comporta bem aqui */
+}
+
+/* --- Botão "Voltar ao Menu" --- */
+.btn-voltar {
+  position: fixed; /* Fixa relativo à janela do navegador */
+  top: 20px;
+  left: 20px;
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #3182ce; /* Azul moderno */
+  text-decoration: none;
+  border-radius: 50px; /* Botão pílula */
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  z-index: 9999; /* Garante que fica acima de TUDO */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.btn-voltar:hover {
+  background-color: #3182ce;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(49, 130, 206, 0.3);
+}
+
+/* --- Estilização dos Elementos GUI do p5.js (Botões e Sliders dentro do Canvas) --- */
+/* Esta classe .p5-control-container é criada no JavaScript para agrupar os controlos */
+.p5-control-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+  max-width: 180px;
+}
+
+/* Estilo para Botões criados com createButton() */
+.p5-control-container button {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.p5-control-container button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Estilo para as etiquetas de texto dentro do contentor de controlos */
+.p5-control-container label {
+  font-size: 12px;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: -5px;
+  display: block;
+}
+
+/* Estilo para Sliders criados com createSlider() */
+.p5-control-container input[type=range] {
+  width: 100%;
+  cursor: pointer;
+}
