@@ -1,0 +1,1 @@
+# AMinhaGaleria-ProjetoA
