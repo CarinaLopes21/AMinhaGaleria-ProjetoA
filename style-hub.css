@@ -1,0 +1,106 @@
+/* Configurações Globais */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, hsl(269, 97%, 31%) 100%);
+  margin: 0;
+  padding: 40px 20px;
+  color: #37558a;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 10px;
+  letter-spacing: -0.05em;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #0b1627;
+  font-weight: 300;
+}
+
+/* Contentor dos Cards */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cartões (Cards) */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  color: #1a202c;
+  margin: 0 0 12px 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Botões */
+.btn {
+  display: block;
+  padding: 12px 24px;
+  background-color: #3182ce;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.btn:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0 6px 20px rgba(49, 130, 206, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
